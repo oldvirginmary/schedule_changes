@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "/css/semantic.min.css" %}">
+    <link rel="stylesheet" href="{% static "/css/main.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{% static "js/semantic.min.js" %}"></script>
+
+
+    <section id="main_section">
+        <form action="" method="post">
+            {% csrf_token %}
+            <select id="groupNumberField" class="ui search dropdown" name="group_number">
+                <option value="ИСП 11.18.3">ИСП 11.18.3</option>
+                <option value="ЛЗ 09.16.1">ЛЗ 09.16.1</option>
+                <option value="СТ 11.17.2">СТ 11.17.2</option>
+            </select>
+
+            <button>получить</button>
+        </form>
+
+        <div id="historyBtn" class="ui animated button" tabindex="0">
+          <div class="visible content">проверить</div>
+          <div class="hidden content">
+            <i class="history arrow icon"></i>
+          </div>
+        </div>
+
+        <!-- <div id="downloadBtn" class="ui animated button" tabindex="0">
+          <div class="visible content">получить</div>
+          <div class="hidden content">
+            <i class="right arrow icon"></i>
+          </div>
+        </div> -->
+    </section>
+
+
+    <script src="{% static "js/main.js" %}"></script>
+</body>
+</html>
